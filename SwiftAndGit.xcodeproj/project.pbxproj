@@ -47,6 +47,7 @@
 		589441ED1FE3769B00DCDF28 /* SwiftAndGitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftAndGitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		589441F11FE3769B00DCDF28 /* SwiftAndGitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftAndGitUITests.swift; sourceTree = "<group>"; };
 		589441F31FE3769B00DCDF28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		589442001FE3794E00DCDF28 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +100,8 @@
 			children = (
 				589441D11FE3769B00DCDF28 /* AppDelegate.swift */,
 				589441D31FE3769B00DCDF28 /* ViewController.swift */,
-				589441D51FE3769B00DCDF28 /* Main.storyboard */,
-				589441D81FE3769B00DCDF28 /* Assets.xcassets */,
-				589441DA1FE3769B00DCDF28 /* LaunchScreen.storyboard */,
-				589441DD1FE3769B00DCDF28 /* Info.plist */,
+				589442001FE3794E00DCDF28 /* MyPlayground.playground */,
+				589441FF1FE378F100DCDF28 /* Supporting Files */,
 			);
 			path = SwiftAndGit;
 			sourceTree = "<group>";
@@ -123,6 +122,17 @@
 				589441F31FE3769B00DCDF28 /* Info.plist */,
 			);
 			path = SwiftAndGitUITests;
+			sourceTree = "<group>";
+		};
+		589441FF1FE378F100DCDF28 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				589441D51FE3769B00DCDF28 /* Main.storyboard */,
+				589441D81FE3769B00DCDF28 /* Assets.xcassets */,
+				589441DA1FE3769B00DCDF28 /* LaunchScreen.storyboard */,
+				589441DD1FE3769B00DCDF28 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
