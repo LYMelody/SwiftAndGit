@@ -15,7 +15,7 @@ Creating a new branch is quick and simple.
 name
 
 
-mini:dev chenge is simple.
+mini:dev chenge is simple. + a little change
 
 Pro:dev change is simple , a little change.
 
