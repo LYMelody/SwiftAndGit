@@ -10,9 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    let mainViewController = UIViewController();
+    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //打印视图的size大小
+        print(mainViewController.view.frame.size);
         
         print("hello world! ------- MACMini")
         
