@@ -15,17 +15,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         print("hello world! ------- MACMini")
-        print("你好，China!")
-        
-        let name = "tom"
-        let age = 10
-        var time = 1898
-        time  = 1992
-        print(name+String(age)+String(time))
-        
-        
-        
-        
         
     }
 
