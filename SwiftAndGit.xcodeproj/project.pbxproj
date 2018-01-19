@@ -438,7 +438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SK4SQ2X64Z;
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftAndGit/Supporting Files/Info.plist";
+				INFOPLIST_FILE = SwiftAndGit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightzhou.SwiftAndGit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,7 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SK4SQ2X64Z;
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftAndGit/Supporting Files/Info.plist";
+				INFOPLIST_FILE = SwiftAndGit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightzhou.SwiftAndGit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
