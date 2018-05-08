@@ -12,8 +12,6 @@ class ViewController: UIViewController {
 
     
     let mainViewController = UIViewController();
-    
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -24,7 +22,19 @@ class ViewController: UIViewController {
         
         print("hello world! ------- MACMini")
         
-        print("test merge")
+
+        print("ProGit")
+        
+        print("'git diff' and 'git diff --staged'")
+        
+        print("git commit -a -m")
+        
+        print("commit")
+        
+        print("git commit -amend")
+        
+        print("merge")
+
         
     }
 
