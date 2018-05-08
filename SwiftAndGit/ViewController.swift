@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         print("merge")
 
-        
+        print("merge master")
     }
 
     override func didReceiveMemoryWarning() {
