@@ -48,6 +48,8 @@ class ViewController: UIViewController {
 
         print("remote branch")
     
+        print("branchTest")
+        
         view.addSubview(phoneButton)
         phoneButton.center = view.center
         
