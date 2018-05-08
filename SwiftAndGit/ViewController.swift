@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         
         print("hello world! ------- MACMini")
         
+        print("ProGit")
+        
+        print("'git diff' and 'git diff --staged'")
     }
 
     override func didReceiveMemoryWarning() {
