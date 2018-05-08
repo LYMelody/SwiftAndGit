@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         
         print("hello world! ------- MACMini")
         
+        print("test merge")
+        
     }
 
     override func didReceiveMemoryWarning() {
