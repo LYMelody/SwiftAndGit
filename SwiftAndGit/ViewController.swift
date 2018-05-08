@@ -31,6 +31,9 @@ class ViewController: UIViewController {
         print("commit")
         
         print("git commit -amend")
+        
+        print("merge")
+        
     }
 
     override func didReceiveMemoryWarning() {
