@@ -12,8 +12,6 @@ class ViewController: UIViewController {
 
     
     let mainViewController = UIViewController();
-    
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
