@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         print("ProGit")
         
         print("'git diff' and 'git diff --staged'")
+        
+        print("git commit -a -m")
     }
 
     override func didReceiveMemoryWarning() {
