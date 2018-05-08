@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         
         print("merge")
 
+        print("remote branch")
         
     }
 
