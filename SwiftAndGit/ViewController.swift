@@ -9,6 +9,21 @@
 import UIKit
 import Foundation
 
+struct Pattern {
+    let str:String
+    init(_ s: String) {
+        self.str = s
+    }
+}
+
+func ~=(pattern: Pattern,value:String) -> Bool {
+    return value.range(of: pattern.str) != nil
+}
+
+//func ~=<T,U>(_:T,_:U)-> Bool {
+//    return true
+//}
+
 class ViewController: UIViewController {
 
     
@@ -111,6 +126,37 @@ class ViewController: UIViewController {
         
         print(lowercaseLetters.overlaps("c"..<"f"))
         
+        ///
+        let emptyList = List<Int>.end
+        //let oneElementList = List.node(1, next: emptyList)
+        
+        let list = List<Int>.end.cons(1).cons(2).cons(3)
+        
+        print(list)
+        
+        let scanner = Scanner(string: "lisa123")
+        var username: NSString? = "qweqwe"
+        let alphas = CharacterSet.alphanumerics
+        
+        if scanner.scanCharacters(from: alphas, into: &username),let name = username {
+            print(name)
+        }
+        
+        let stringNumbers = ["1","2","three"]
+        let maybeInts = stringNumbers.map{Int($0)}
+        
+        for case let i? in maybeInts {
+            print(i,terminator:"")
+        }
+        
+        for case let .some(i) in maybeInts {
+            print(i)
+        }
+        
+        let s = "Talor Swift"
+        if case Pattern("X") = s {
+            print("\(String(reflecting: s)) contains \"Swift\"")
+        }
         
         
     }
@@ -129,6 +175,8 @@ class ViewController: UIViewController {
         
         print(flag)
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
