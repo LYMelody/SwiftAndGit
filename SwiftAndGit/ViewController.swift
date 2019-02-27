@@ -9,6 +9,8 @@
 import UIKit
 import Foundation
 
+infix operator ???: NilCoalescingPrecedence
+
 struct Pattern {
     let str:String
     init(_ s: String) {
@@ -28,7 +30,7 @@ class ViewController: UIViewController {
 
     
     let mainViewController = UIViewController();
-    
+
     var phoneButton: UIButton = {
         let button = UIButton()
         button.frame = CGRect(x: 0, y: 0, width: 60, height: 30)
@@ -43,6 +45,27 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var myWindow: Window? = Window()
+        
+        print(isKnownUniquelyReferenced(&myWindow))
+        
+        var myView: View? = View(window: myWindow!)
+        
+        print(isKnownUniquelyReferenced(&myWindow))
+        print(isKnownUniquelyReferenced(&myView))
+        
+        myWindow?.rootView = myView
+        
+        print(isKnownUniquelyReferenced(&myWindow))
+        print(isKnownUniquelyReferenced(&myView))
+        
+        myView = nil
+        myWindow = nil
+        
+        print(isKnownUniquelyReferenced(&myWindow))
+        print(isKnownUniquelyReferenced(&myView))
+        
         
         //打印视图的size大小
         print(mainViewController.view.frame.size);
@@ -152,11 +175,47 @@ class ViewController: UIViewController {
         for case let .some(i) in maybeInts {
             print(i)
         }
+//
+//        let s = "Talor Swift"
+//        if case Pattern("Swift") = s {
+//            print("\(String(reflecting: s)) contains \"Swift\"")
+//        }
+//
+        let regex = "^Hellow"
         
-        let s = "Talor Swift"
-        if case Pattern("X") = s {
-            print("\(String(reflecting: s)) contains \"Swift\"")
+        if regex.first == "^" {
+            print("true")
         }
+        
+        
+        /****  函数 排序    ******/
+        
+        let animals = ["elephant","zebra","dog"]
+        let sortedAnimals = animals.sorted { lhs, rhs in
+            let l = lhs.reversed()
+            let r = rhs.reversed()
+            print("@@@@@\(lhs)\(l)")
+            print("#####\(rhs)\(r)")
+            return l.lexicographicallyPrecedes(r)
+        }
+        print(sortedAnimals)
+        
+        
+        let people = [Person(first: "Emily", last: "Young", yearOfBirth: 2002),Person(first: "David", last: "Gray", yearOfBirth: 1991),Person(first: "Robert", last: "Barnes", yearOfBirth: 1985)]
+        let lastDescriptor = NSSortDescriptor(key: #keyPath(Person.last), ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))
+        
+        let descriptors = [lastDescriptor]
+        (people as NSArray).sortedArray(using: descriptors)
+        print(people.description)     
+        
+        
+       let sortedPeople = people.sorted { (p0, p1) -> Bool in
+            let left = [p0.last, p0.first]
+            let right = [p1.last, p1.first]
+            return left.lexicographicallyPrecedes(right)
+        }
+        
+        sortedPeople.map { print("@@@@\($0.first)\($0.last)") }
         
         
     }
@@ -176,14 +235,23 @@ class ViewController: UIViewController {
         print(flag)
     }
     
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 
+}
+
+final class Person: NSObject {
+    let first: String
+    @objc let last: String
+    let yearOfBirth: Int
+    init(first: String, last: String, yearOfBirth: Int) {
+        self.first = first
+        self.last = last
+        self.yearOfBirth = yearOfBirth
+    }
 }
 
 
